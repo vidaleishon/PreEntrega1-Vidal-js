@@ -1,13 +1,23 @@
-let nombre
-let apellido
-let edad
+//Ingrese un nombre
 
-nombre = "Jordi" 
-apellido = "Vidal" 
-edad = 22
+let nombreIngresado = prompt ("¿Cuál es su nombre?");
 
-let nombreIngresado = prompt ("Cómo se llama?");
+if (nombreIngresado !="") {
+    alert ("Saludos, " + nombreIngresado)
+}
+else {
+    alert ("Por favor, ingrese su nombre.") 
+    
+}
 
-let respuesta = "Saludos" + " " + nombreIngresado;
-alert (respuesta)
+//Ingrese un número
 
+let ingresarNumero = prompt ("Ingrese un número del 1 al 10")
+
+for (let i = 1; i < 10 ; i++) {
+
+    if (i == ingresarNumero) {
+        break;
+    }
+     alert (i)
+}
