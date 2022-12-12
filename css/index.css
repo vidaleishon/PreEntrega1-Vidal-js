@@ -118,10 +118,19 @@ nav {
     font-weight: bold;
   }
 
+  h2 {
+    text-align: center;
+  }
+
   .reserva {
     margin: 30px;
-    width: 900px ;
-    height: 700px;
+    width: 900px, x;
+    height: 700px, x;
     background: rgba(66, 31, 41, 0.8);
     border-radius: 45px;
+  }
+
+  .rondeaucamas img {
+    padding: 35px;
+    width: 500px;
   }
