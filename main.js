@@ -1,5 +1,7 @@
 //Ingrese un nombre
 
+/* INICIO CORTE PARA DESARROLLO
+
 let nombreIngresado = prompt("¿Cuál es su nombre?");
 
 if (nombreIngresado != "") {
@@ -47,3 +49,5 @@ switch (ingresarNumero) {
     default: alert("Dato incorrecto.")
 
 }
+
+FIN DE CORTE DE DESARROLLO */
