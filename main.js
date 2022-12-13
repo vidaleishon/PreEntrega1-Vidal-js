@@ -1,53 +1,25 @@
-//Ingrese un nombre
+let consultaEntrada = prompt("Buenas! ¿Eres tutor o invitado?").toLowerCase()
 
-/* INICIO CORTE PARA DESARROLLO
-
-let nombreIngresado = prompt("¿Cuál es su nombre?");
-
-if (nombreIngresado != "") {
-    alert("Saludos, " + nombreIngresado)
-}
-else {
-    alert("Por favor, la próxima vez ingrese su nombre.")
-
+if (consultaEntrada == "tutor") {
+    alert ("Bienvenido, tutor!")
+} else if (consultaEntrada == "invitado") {
+    alert ("Bienvenido!")
 }
 
-//Ingrese un número
-
-let ingresarNumero = prompt("Por favor, ingrese un número del 1 al 10")
-let i = ingresarNumero
-
-for (let i = 1; i < 10; i++) {
-    if (i == ingresarNumero) {
-        alert("Usted ha elegido el número " + i + "!")
-        break;
+while (consultaEntrada != "tutor" && consultaEntrada != "invitado") {      
+    alert ("Por favor, especifique.");
+    consultaEntrada = prompt ("¿Eres tutor o invitado?").toLowerCase();
+    if (consultaEntrada == "tutor") {
+        alert ("Bienvenido, tutor!")
+    } else if (consultaEntrada == "invitado") {
+        alert ("Bienvenido!")
     }
 }
 
-
-switch (ingresarNumero) {
-    case "1":
-        break;
-    case "2":
-        break;
-    case "3":
-        break;
-    case "4":
-        break;
-    case "5":
-        break;
-    case "6":
-        break;
-    case "7":
-        break;
-    case "8":
-        break;
-    case "9":
-        break;
-    case "10":
-        break;
-    default: alert("Dato incorrecto.")
-
+let consultaReserva = prompt("¿Desea reservar?").toLowerCase()
+if (consultaReserva == "si") {
+    alert ("Perfecto!")
 }
 
-FIN DE CORTE DE DESARROLLO */
+let cantidadFechas = parseInt(prompt("Cuántas noches necesita?"))
+alert ("El total es " + 6500*cantidadFechas) 
