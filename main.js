@@ -19,7 +19,22 @@ while (consultaEntrada != "tutor" && consultaEntrada != "invitado") {
 let consultaReserva = prompt("¿Desea reservar?").toLowerCase()
 if (consultaReserva == "si") {
     alert ("Perfecto!")
+} else if (consultaReserva == "no"){
+    alert ("Qué lastima!")
 }
 
-let cantidadFechas = parseInt(prompt("Cuántas noches necesita?"))
-alert ("El total es " + 6500*cantidadFechas) 
+while ( consultaReserva !="si" && consultaReserva != "no") {
+      alert ("Por favor, especifique si o no.")
+      consultaReserva = prompt("¿Desea reservar?").toLowerCase()
+      if (consultaReserva == "si") {
+        alert ("Perfecto!")
+    } else if (consultaReserva == "no"){
+        alert ("Qué lastima!")
+    }
+}
+
+while (consultaReserva == "si") { 
+    let cantidadFechas = parseInt(prompt("Cuántas noches necesita?"))
+    alert ("El total es $" + 6500*cantidadFechas)
+    break;
+} 
