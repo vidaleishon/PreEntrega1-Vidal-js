@@ -35,6 +35,6 @@ while (consultaReserva != "si" && consultaReserva != "no") {
 
 while (consultaReserva == "si") {
   let cantidadFechas = parseInt(prompt("Cuántas noches necesita?"));
-  alert("El total es $" + 6500 * cantidadFechas);
+  alert("El total es $" + 13500 * cantidadFechas);
   break;
 }
