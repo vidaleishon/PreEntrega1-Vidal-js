@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apartamentos Córdoba</title>
-    <link rel="stylesheet" href="./css/bootstrap.css"/>
-    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/index.css" />
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark px-3">
         <figure class="nav_logo">
@@ -36,19 +38,22 @@
     </nav>
     <main>
         <h2>Realiza tu reserva</h2>
-        <div class="reserva"> 
+        <div class="reserva">
             <span class="rondeaucamas">
                 <img src="./imagenes/camas.jpeg" alt="imagen de camas rondeau">
             </span>
-                <input type="email" name="e-mail"  placeholder="e-mail">
-                <input type="date" name= "Llegada">
-                <input type="date" name= "Salida">
-                <input type="submit" value="Enviar">
-
+            <form>
+                <input type="text" name="nombre" placeholder="Nombre y Apellido" >
+                <input type="email" name="e-mail" placeholder="e-mail">
+                <input type="date" name="Llegada" id="fechallegada">
+                <input type="date" name="Salida" id="fechasalida">
+                <input type="submit" value="Enviar" id="e">
+            </form>
         </div>
     </main>
 
     <script src="./main.js"></script>
 
 </body>
+
 </html>

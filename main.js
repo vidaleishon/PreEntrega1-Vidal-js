@@ -37,4 +37,15 @@ while (consultaReserva == "si") {
   let cantidadFechas = parseInt(prompt("Cuántas noches necesita?"));
   alert("El total es $" + 13500 * cantidadFechas);
   break;
-}
+} 
+
+function handleSubmit(e) {
+    e.preventDefault();
+    let fechaLlegada = element.getElementById("fechallegada").value
+    let fechaSalida = element.getElementById("fechasalida").value
+    var fechaInicio = new Date(fechaLlegada).getTime();
+    var fechaFinal = new Date(fechaSalida).getTime();
+    var diff = fechaFinal - fechaInicio;
+
+    console.log(diff/(1000*60*60*24));
+  }
