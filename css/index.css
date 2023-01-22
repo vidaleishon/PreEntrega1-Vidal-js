@@ -134,3 +134,7 @@ nav {
     padding: 35px;
     width: 500px;
   }
+
+  .formulario_reserva {
+    display: inline-flex;
+  }

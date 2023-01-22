@@ -37,17 +37,18 @@
         </div>
     </nav>
     <main>
-        <h2>Realiza tu reserva</h2>
+        <h2>Consulta para una reserva</h2>
         <div class="reserva">
             <span class="rondeaucamas">
                 <img src="./imagenes/camas.jpeg" alt="imagen de camas rondeau">
             </span>
-            <form>
-                <input type="text" name="nombre" placeholder="Nombre y Apellido" >
-                <input type="email" name="e-mail" placeholder="e-mail">
+            <form class="formulario_reserva">
+                <input type="text" name="nombre" placeholder="Nombre y Apellido" id="nombreyapellido">
+                <input type="email" name="e-mail" placeholder="e-mail" id="email">
                 <input type="date" name="Llegada" id="fechallegada">
                 <input type="date" name="Salida" id="fechasalida">
-                <input type="submit" value="Enviar" id="e">
+                <input textarea rows="4" cols="2" placeholder ="Datos a tener en cuenta en su consulta" id="datosextra"></textarea>
+                <input type="submit" onclick="reserva()"/>
             </form>
         </div>
     </main>
