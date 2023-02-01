@@ -122,19 +122,56 @@ nav {
     text-align: center;
   }
 
-  .reserva {
+  #reserva_rondeau {
     margin: 30px;
-    width: 900px, x;
-    height: 700px, x;
+    height: auto;
     background: rgba(66, 31, 41, 0.8);
     border-radius: 45px;
+    display: flex;
   }
 
-  .rondeaucamas img {
+  #rondeaucamas img {
     padding: 35px;
-    width: 500px;
+    padding-left: 100px;
+    width: 550px;
   }
 
-  .formulario_reserva {
-    display: inline-flex;
+  #formulario_reserva {
+    display: grid;
+    margin: 50px;
+    padding: 50px;
+    background: #00000033;
+
   }
+
+  form input {
+    display:flex;
+    height: 30px;
+    margin: 6px;
+  }
+
+  .input_contact {
+   background: #00000033;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  }
+
+  .input_submit {
+    height: 35px;
+    margin: 10px;
+    background-color: #161619;
+    color: #ffffffff;
+  }
+  #datosextra {
+    height: 100px;
+  }
+
+  #respuestaconsulta {
+   display: inline-block;
+   
+  }
+
+  

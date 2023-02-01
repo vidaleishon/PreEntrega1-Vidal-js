@@ -38,18 +38,40 @@
     </nav>
     <main>
         <h2>Consulta para una reserva</h2>
-        <div class="reserva">
-            <span class="rondeaucamas">
+        <div id="reserva_rondeau">
+            <span class="col-lg-6 col-sm-12" id="rondeaucamas">
                 <img src="./imagenes/camas.jpeg" alt="imagen de camas rondeau">
             </span>
-            <form class="formulario_reserva">
-                <input type="text" name="nombre" placeholder="Nombre y Apellido" id="nombreyapellido">
-                <input type="email" name="e-mail" placeholder="e-mail" id="email">
-                <input type="date" name="Llegada" id="fechallegada">
-                <input type="date" name="Salida" id="fechasalida">
-                <input textarea rows="4" cols="2" placeholder ="Datos a tener en cuenta en su consulta" id="datosextra"></textarea>
-                <input type="submit" onclick="reserva()"/>
+            <form id="formulario_reserva">
+
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-lg-6 justify-content-center d-flex">
+                        <input class="input_contact" type="text" placeholder="Nombre y Apellido *" id="nombreyapellido"
+                            required="">
+                    </div>
+                    <div class="col-sm-12 col-lg-6 justify-content-center d-flex">
+                        <input class="input_contact" type="email" placeholder="e-mail *" required="" id="email">
+                    </div>
+                    <div class="col-sm-12 col-lg-6 justify-content-center d-flex">
+                        <input class="input_contact" type="date" name="Llegada" id="fechallegada" required>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 justify-content-center d-flex">
+                        <input class="input_contact" type="date" name="Salida" id="fechasalida" required>
+                    </div>
+                    <div class="col-sm-12 col-lg-12 justify-content-center d-flex">
+                        <textarea class="input_contact" name="Mensaje"
+                            placeholder="Datos a tener en cuenta en su consulta" cols="50" id="datosextra"></textarea>
+                    </div>
+                    <div class="col-12 justify-content-center d-flex">
+                        <button class="input_submit" type="submit" placeholder="Enviar" id="botonenviar">Enviar</button>
+                    </div>
+                </div>
+
+
             </form>
+                
+            <div id="respuestaconsulta">
+                
         </div>
     </main>
 

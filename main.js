@@ -23,14 +23,45 @@ function reserva() {
 
   console.log(nuevaReserva)
 
+  let descuento = 1;
   if (cantidadDias >= 7 && cantidadDias < 16) {
-    console.log("Debido a la cantidad de días de su posible estadía, se le ofrecerá un descuento del 5%. El precio final de su reserva es de ARS$ " + (precioTotal * 0.95))
+    descuento = 0.95;
+    console.log("Su reserva es de " + cantidadDias + " noches. Debido a la cantidad de fechas en su posible estadía, se le ofrecerá un descuento del 5%. El precio final de su reserva es de ARS$ " + (precioTotal * 0.95))
   } else if (cantidadDias >= 16 && cantidadDias < 30) {
-    console.log("Debido a la cantidad de días de su posible estadía, se le ofrecerá un descuento del 8%. El precio final de su reserva es de ARS$ " + (precioTotal * 0.92))
+    descuento = 0.92;
+    console.log("Su reserva es de " + cantidadDias + " noches. Debido a la cantidad de fechas en su posible estadía, se le ofrecerá un descuento del 8%. El precio final de su reserva es de ARS$ " + (precioTotal * 0.92))
   } else if (cantidadDias > 30) {
-    console.log("Debido a la cantidad de días de su posible estadía, se le ofrecerá un descuento del 12%. El precio final de su reserva es de ARS$ " + (precioTotal * 0.88))
+    descuento = 0.88;
+    console.log("Su reserva es de " + cantidadDias + " noches. Debido a la cantidad de fechas en su posible estadía, se le ofrecerá un descuento del 12%. El precio final de su reserva es de ARS$ " + (precioTotal * 0.88))
   } else {
-    console.log("Su reserva es de " + cantidadDias + " días. El precio final de su reserva es de $" + precioTotal)
+    console.log("Su reserva es de " + cantidadDias + " noches. El precio final de su reserva es de $" + precioTotal)
   }
 
+  let precioFinal = precioTotal * descuento
+
+  let nodo = document.createElement("div");
+  nodo.innerHTML = `<h3>Su reserva:</h3>
+   <h5> Nombre: </h5> <p>${nombreReserva}</p> 
+   <h5> Email: </h5><p>${emailReserva}</p>   
+   <h5> Fecha de Llegada: </h5><p>${fechaInicioReserva}</p> 
+   <h5> Fecha de Salida: </h5><p>${fechaFinReserva}</p> 
+   <h5> Datos a tener en cuenta: </h5><p>${datosExtra}</p> 
+   <p> Realizada desde el día ${fechaInicioReserva} hasta el día ${fechaFinReserva}. Por un total de ${cantidadDias} noches, el precio total es de <strong>ARS$${precioFinal}</strong>. </p>`
+
+  document.getElementById("respuestaconsulta").appendChild(nodo);
+
+
 }
+
+const enviarDato = document.getElementById("botonenviar");
+
+enviarDato.onclick = (e) => {
+  e.preventDefault();
+  reserva(e);
+  
+}
+
+
+
+
+
