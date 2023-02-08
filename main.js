@@ -57,7 +57,7 @@ function reserva() {
   
   
   datosReserva.push(nuevaReserva);
-  return datosReserva;
+  localStorage.setItem ("reserva", JSON.stringify(datosReserva))
   
 }
 
