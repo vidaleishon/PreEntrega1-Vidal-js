@@ -9,7 +9,7 @@ class Reserva {
   }
 }
 
-const datosReserva = []
+const datosReserva = JSON.parse(localStorage.getItem("reserva")) || [];
 
 function reserva() {
   let nombreReserva = document.getElementById("nombreyapellido").value;
@@ -24,6 +24,9 @@ function reserva() {
   var precioTotal = cantidadDias * 13500;
   
   const nuevaReserva = new Reserva(nombreReserva, emailReserva, fechaInicioReserva, fechaFinReserva, datosExtra);
+
+  datosReserva.push(nuevaReserva);
+  localStorage.setItem ("reserva", JSON.stringify(datosReserva));
 
   
   console.log(nuevaReserva)
@@ -44,7 +47,7 @@ function reserva() {
   
   let precioFinal = precioTotal * descuento
   
-  let nodo = document.createElement("div");
+  let nodo = document.getElementById("respuestaconsulta");
   nodo.innerHTML = `<h3>Su reserva:</h3>
   <h5> Nombre: </h5> <p>${nombreReserva}</p> 
   <h5> Email: </h5><p>${emailReserva}</p>   
@@ -53,15 +56,7 @@ function reserva() {
   <h5> Datos a tener en cuenta: </h5><p>${datosExtra}</p> 
   <p> Realizada desde el día ${fechaInicioReserva} hasta el día ${fechaFinReserva}. Por un total de ${cantidadDias} noches, el precio total es de <strong>ARS$${precioFinal}</strong>. </p>`
   
-  document.getElementById("respuestaconsulta").appendChild(nodo);
-  
-  
-  datosReserva.push(nuevaReserva);
-  localStorage.setItem ("reserva", JSON.stringify(datosReserva))
-  
 }
-
-const enviarDato = document.getElementById("botonenviar");
 
 const formulario = document.querySelector("#formulario_reserva");
 
