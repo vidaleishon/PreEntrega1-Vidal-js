@@ -22,15 +22,15 @@ function reserva() {
   var diff = fechaSalida - fechaLlegada;
   var cantidadDias = diff / (1000 * 60 * 60 * 24);
   var precioTotal = cantidadDias * 13500;
-  
+
   const nuevaReserva = new Reserva(nombreReserva, emailReserva, fechaInicioReserva, fechaFinReserva, datosExtra);
 
   datosReserva.push(nuevaReserva);
-  localStorage.setItem ("reserva", JSON.stringify(datosReserva));
+  localStorage.setItem("reserva", JSON.stringify(datosReserva));
 
-  
+
   console.log(nuevaReserva)
-  
+
   let descuento = 1;
   if (cantidadDias >= 7 && cantidadDias < 16) {
     descuento = 0.95;
@@ -44,9 +44,9 @@ function reserva() {
   } else {
     console.log("Su reserva es de " + cantidadDias + " noches. El precio final de su reserva es de $" + precioTotal)
   }
-  
+
   let precioFinal = precioTotal * descuento
-  
+
   let nodo = document.getElementById("respuestaconsulta");
   nodo.innerHTML = `<h3>Su reserva:</h3>
   <h5> Nombre: </h5> <p>${nombreReserva}</p> 
@@ -55,7 +55,7 @@ function reserva() {
   <h5> Fecha de Salida: </h5><p>${fechaFinReserva}</p> 
   <h5> Datos a tener en cuenta: </h5><p>${datosExtra}</p> 
   <p> Realizada desde el día ${fechaInicioReserva} hasta el día ${fechaFinReserva}. Por un total de ${cantidadDias} noches, el precio total es de <strong>ARS$${precioFinal}</strong>. </p>`
-  
+
 }
 
 const formulario = document.querySelector("#formulario_reserva");
@@ -63,7 +63,7 @@ const formulario = document.querySelector("#formulario_reserva");
 formulario.onsubmit = (e) => {
   e.preventDefault();
   reserva(e);
-  
+
 }
 
 
