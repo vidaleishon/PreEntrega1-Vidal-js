@@ -171,7 +171,11 @@ nav {
 
   #respuestaconsulta {
    display: inline-block;
-   
+   margin: 15px;
+   padding: 15px;  
   }
 
-  
+  .swal2-title {
+    font-family: "Raleway", sans-serif;
+    color: white !important;
+  }

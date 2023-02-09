@@ -64,8 +64,15 @@ formulario.onsubmit = (e) => {
   e.preventDefault();
   reserva(e);
 
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Gracias!',
+    background: 'rgba(66, 31, 41, 0.8)',
+    showConfirmButton: false,
+    timer: 1500
+  })
 }
-
 
 
 
